@@ -67,8 +67,8 @@ av.debug.disable.pers.cache=1
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
 # Graphics
-debug.sf.enable_gl_backpressure=1
-debug.cpurend.vsync=false
+# debug.sf.enable_gl_backpressure=1
+debug.cpurend.vsync=true
 
 #minimum duration for offload playback in secs
 audio.offload.min.duration.secs=30
