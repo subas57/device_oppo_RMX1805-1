@@ -31,3 +31,8 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 EXTRA_FOD_ANIMATIONS := false
 
 TARGET_USES_BLUR := true
+# Corvus Maintainer
+
+PRODUCT_PROPERTY_OVERRIDES += \
+
+    ro.corvus.maintainer=Abhinav : )
