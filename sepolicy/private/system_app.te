@@ -1,0 +1,15 @@
+type vendor_sysfs_graphics, sysfs_type, fs_type;
+type sysfs_usb_supply, sysfs_type, fs_type;
+allow system_app sysfs:file { read };
+allow system_app sysfs:file { open };
+allow system_app sysfs:file { getattr };
+
+# Allow theme_prop to be read and set by Settings
+get_prop(system_app, theme_prop)
+set_prop(system_app, theme_prop)
+
+# RealmeHub
+allow system_app vendor_sysfs_graphics:file { getattr open read };
+
+# OTG Tile
+allow system_app sysfs_usb_supply:file { write };
