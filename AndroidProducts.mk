@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cherish_RMX1805.mk
+    $(LOCAL_DIR)/spark_RMX1805.mk
 
 COMMON_LUNCH_CHOICES := \
-    cherish_RMX1805-user \
-    cherish_RMX1805-userdebug \
-    cherish_RMX1805-eng
+    spark_RMX1805-user \
+    spark_RMX1805-userdebug \
+    spark_RMX1805-eng
