@@ -166,10 +166,6 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils \
     qti_telephony_utils.xml
 
-# Remove unwanted packages
-PRODUCT_PACKAGES += \
-    RemovePackages
-
 # RCS
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
