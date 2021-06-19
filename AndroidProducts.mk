@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/spark_RMX1805.mk
+    $(LOCAL_DIR)/derp_RMX1805.mk
 
 COMMON_LUNCH_CHOICES := \
-    spark_RMX1805-user \
-    spark_RMX1805-userdebug \
-    spark_RMX1805-eng
+    derp_RMX1805-user \
+    derp_RMX1805-userdebug \
+    derp_RMX1805-eng
