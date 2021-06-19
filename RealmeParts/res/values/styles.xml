@@ -25,7 +25,8 @@
         <item name="switchPreferenceStyle">@style/Theme.Main.SwitchPreferenceStyle</item>
     </style>
 
-    <style name="Theme.Main.DialogPreferenceStyle" parent="@style/Theme.Main.PreferenceStyle"></style>
+    <style name="Theme.Main.DialogPreferenceStyle" parent="@style/Theme.Main.PreferenceStyle">
+    </style>
 
     <style name="Theme.Main.PreferenceCategoryStyle" parent="@*android:style/Preference.DeviceDefault.Category">
         <item name="allowDividerAbove">true</item>
@@ -35,7 +36,7 @@
 
     <style name="Theme.Main.PreferenceFragmentStyle" parent="@*android:style/PreferenceFragment.Material">
         <item name="allowDividerAfterLastItem">false</item>
-</style>
+    </style>
 
     <style name="Theme.Main.PreferenceStyle" parent="@*android:style/Preference.DeviceDefault">
         <item name="allowDividerAbove">false</item>
@@ -54,7 +55,8 @@
         <item name="widgetLayout">@*android:layout/preference_widget_switch</item>
     </style>
 
-    <style name="Theme.Main.SwitchBar" parent="@android:style/ThemeOverlay.Material.ActionBar"></style>
+    <style name="Theme.Main.SwitchBar" parent="@android:style/ThemeOverlay.Material.ActionBar">
+    </style>
 
     <style name="Theme.Main.SwitchBar.Switch">
         <item name="android:trackTint">@color/switchbar_switch_track_tint</item>
@@ -63,9 +65,9 @@
 
     <style name="Theme.Main.TextAppearance.CategoryTitle"
            parent="@*android:style/TextAppearance.DeviceDefault.Body2">
-        <!-- 0.8 Spacing, 0.8/11 = 0.072727273 -->
-        <item name="android:letterSpacing">0.072727273</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textSize">11sp</item>
+        <!-- 0.8 Spacing, 0.8/11 = 0.072727273 -->
+        <item name="android:letterSpacing">0.072727273</item>
     </style>
 </resources>
