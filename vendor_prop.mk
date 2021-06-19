@@ -85,7 +85,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.charger.enable_suspend=true
 
-# Dolby
+#Dolby
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.audio_fx.current=dolby \
     ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1 \
