@@ -26,6 +26,8 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
+    vendor.audio.dolby.ds2.enabled=false \
+    vendor.audio.dolby.ds2.hardbypass=false \
     persist.vendor.audio.hw.binder.size_kbyte=1024 \
     persist.vendor.audio.speaker.prot.enable=false \
     persist.vendor.qcomsysd.enabled=1 \
@@ -84,13 +86,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # charger
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.charger.enable_suspend=true
-
-#Dolby
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.audio_fx.current=dolby \
-    ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1 \
-    vendor.audio.dolby.ds2.enabled=true \
-    vendor.audio.dolby.ds2.hardbypass=true
 
 #Enable Zygote Preforking
 PRODUCT_PROPERTY_OVERRIDES += \
