@@ -18,6 +18,11 @@ on post-fs
 on boot
     # OTG
     write /sys/class/power_supply/usb/otg_switch 1
+   
+    # USB-OTG
+    chown system system /sys/class/power_supply/usb/otg_switch
+    chmod 0666 /sys/class/power_supply/usb/otg_switch
+
 
     # backlight
     chown system system /sys/class/backlight/panel0-backlight/brightness
@@ -30,6 +35,13 @@ on boot
     mount none /dev/null vendor/lib/hw/android.hardware.light@2.0-impl.so bind
     mount none /dev/null vendor/lib64/hw/lights.msm8953.so bind
     mount none /dev/null vendor/lib64/hw/android.hardware.light@2.0-impl.so bind
+
+    # Game mode
+    write /proc/touchpanel/game_switch_enable 1
+
+    # Smart Charging
+    chown system system /sys/class/power_supply/battery/mmi_charging_enable
+    chmod 0666 /sys/class/power_supply/battery/mmi_charging_enable
 
 service set_zram /vendor/bin/sh /system/etc/init/set_zram.sh
     class late_start
@@ -48,3 +60,15 @@ service ktweak /vendor/bin/sh /system/etc/init/ktweak.sh
 on property:sys.boot_completed=1
     start set_zram
     start ktweak
+
+# Performance profiles
+on property:perf_profile=1
+    exec - root -- /system/bin/perf_profile.sh 1
+
+on property:perf_profile=0
+    exec - root -- /system/bin/perf_profile.sh 0
+
+on property:sys.boot_completed=1
+    chown root root /sys/module/ged/parameters/gx_force_cpu_boost
+    chown root root /proc/cpufreq/cpufreq_power_mode
+    chown root root /proc/cpufreq/cpufreq_cci_mode
