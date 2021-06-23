@@ -17,7 +17,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Corvus stuff
+# Inherit some common RevengeOS stuff
 $(call inherit-product, vendor/revengeos/config/common_full_phone.mk)
 
 # Inherit from RMX1805 device
@@ -32,8 +32,6 @@ PRODUCT_MANUFACTURER := oppo
 PRODUCT_NAME := revengeos_RMX1805
 PRODUCT_MODEL := Realme 2/C1
 
-# Official-ify
-RAVEN_LAIR=
 
 
 # PRODUCT_GMS_CLIENTID_BASE := android-oppo
@@ -43,9 +41,10 @@ TARGET_VENDOR_PRODUCT_NAME := RMX1805
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="RMX1805"
 
-#TARGET_GAPPS_ARCH := arm64
+TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
 TARGET_USES_BLUR := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
+BUILD_FINGERPRINT := "google/redfin/redfin:11/RQ3A.210605.005/7349499:user/release-keys"
