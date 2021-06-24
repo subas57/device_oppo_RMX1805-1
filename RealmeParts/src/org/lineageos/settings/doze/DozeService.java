@@ -31,12 +31,25 @@ public class DozeService extends Service {
 
     private ProximitySensor mProximitySensor;
     private TiltSensor mTiltSensor;
+    private AmdSensor mAmdSensor;
+
+    private BroadcastReceiver mScreenStateReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
+                onDisplayOn();
+            } else if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
+                onDisplayOff();
+            }
+        }
+    };
 
     @Override
     public void onCreate() {
         if (DEBUG) Log.d(TAG, "Creating service");
         mProximitySensor = new ProximitySensor(this);
         mTiltSensor = new TiltSensor(this);
+        mAmdSensor = new AmdSensor(this);
 
         IntentFilter screenStateFilter = new IntentFilter();
         screenStateFilter.addAction(Intent.ACTION_SCREEN_ON);
@@ -57,6 +70,7 @@ public class DozeService extends Service {
         this.unregisterReceiver(mScreenStateReceiver);
         mProximitySensor.disable();
         mTiltSensor.disable();
+        mAmdSensor.disable();
     }
 
     @Override
@@ -69,8 +83,10 @@ public class DozeService extends Service {
         if (DozeUtils.isPickUpEnabled(this)) {
             mTiltSensor.disable();
         }
-        if (DozeUtils.isHandwaveGestureEnabled(this) ||
-                DozeUtils.isPocketGestureEnabled(this)) {
+        if (DozeUtils.isSmartWakeEnabled(this)) {
+            mAmdSensor.disable();
+        }
+        if (DozeUtils.isPocketGestureEnabled(this)) {
             mProximitySensor.disable();
         }
     }
@@ -80,20 +96,11 @@ public class DozeService extends Service {
         if (DozeUtils.isPickUpEnabled(this)) {
             mTiltSensor.enable();
         }
-        if (DozeUtils.isHandwaveGestureEnabled(this) ||
-                DozeUtils.isPocketGestureEnabled(this)) {
+        if (DozeUtils.isSmartWakeEnabled(this) && DozeUtils.isPickUpEnabled(this)) {
+            mAmdSensor.enable();
+        }
+        if (DozeUtils.isPocketGestureEnabled(this)) {
             mProximitySensor.enable();
         }
     }
-
-    private BroadcastReceiver mScreenStateReceiver = new BroadcastReceiver() {
-        @Override
-        public void onReceive(Context context, Intent intent) {
-            if (intent.getAction().equals(Intent.ACTION_SCREEN_ON)) {
-                onDisplayOn();
-            } else if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
-                onDisplayOff();
-            }
-        }
-    };
 }
