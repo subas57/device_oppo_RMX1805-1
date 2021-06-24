@@ -18,7 +18,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common RevengeOS stuff
-$(call inherit-product, vendor/revengeos/config/common.mk)
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
 # Inherit from RMX1805 device
 $(call inherit-product, device/oppo/RMX1805/device.mk)
@@ -40,6 +40,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="RMX1805"
 
 TARGET_GAPPS_ARCH := arm64
+WITH_GAPPS := true
+IS_PHONE := true
 TARGET_INCLUDE_STOCK_ARCORE := true
 TARGET_BOOT_ANIMATION_RES := 720
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
