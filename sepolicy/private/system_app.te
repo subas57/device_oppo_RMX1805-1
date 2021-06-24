@@ -18,3 +18,6 @@ allow system_app sysfs_usb_supply:file { write };
 # Allow system_app to read fps info node
 allow system_app sysfs_fps:dir search;
 allow system_app sysfs_fps:file r_file_perms;
+
+# Allow system_server for usb and smart charging nodes
+allow system_server sysfs_battery_supply:file { getattr open read write };
