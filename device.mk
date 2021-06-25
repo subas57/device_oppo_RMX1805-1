@@ -199,6 +199,11 @@ PRODUCT_COPY_FILES += \
 # WiFi Display
 PRODUCT_PACKAGES += \
     libnl
+    
+# Charger
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/configs/off_chg.sh:install/bin/off_chg.sh \
+    $(DEVICE_PATH)/rootdir/bin/charger:install/bin/charger
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
