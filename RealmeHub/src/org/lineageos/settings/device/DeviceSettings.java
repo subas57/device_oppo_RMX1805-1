@@ -121,11 +121,10 @@ public class DeviceSettings extends PreferenceFragment
         switch (key) {
             case PREF_KEY_FPS_INFO:
                 boolean enabled = (Boolean) value;
-                Intent fpsinfo = new Intent(this.getContext(), FPSInfoService.class);
                 if (enabled) {
-                    this.getContext().startService(fpsinfo);
+                    Utils.startService(this.getContext(), org.lineageos.settings.device.FPSInfoService.class);
                 } else {
-                    this.getContext().stopService(fpsinfo);
+                    Utils.stopService(this.getContext(), org.lineageos.settings.device.FPSInfoService.class);
                 }
                 break;
 

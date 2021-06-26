@@ -1,23 +1,33 @@
 type vendor_sysfs_graphics, sysfs_type, fs_type;
 type sysfs_usb_supply, sysfs_type, fs_type;
-allow system_app sysfs:file { read };
-allow system_app sysfs:file { open };
-allow system_app sysfs:file { getattr };
+#allow system_app vibrator_sysfs:file rw_file_perms;
+allow system_app proc_touchpanel:dir { search };
+allow system_app proc_touchpanel:file rw_file_perms;
+allow system_app oppo_debug_prop:file { read open getattr };
+
+r_dir_file(system_app, proc_touchpanel);
+#r_dir_file(system_app, vibrator_sysfs);
+
+# RealmeHub
+allow system_app vendor_sysfs_graphics:file { getattr open read };
+
+# FPS Info
+allow system_app sysfs:file { getattr open read };
+
+# OTG Tile
+allow system_app sysfs_usb_supply:file { write };
+
+# Perf profile
+get_prop(system_app, vendor_perf_prop)
+allow system_app vendor_perf_prop:property_service set;
+
+# CABC Mode
+allow system_app default_prop:property_service set;
 
 # Allow theme_prop to be read and set by Settings
 get_prop(system_app, theme_prop)
 set_prop(system_app, theme_prop)
 
-# RealmeHub
-allow system_app vendor_sysfs_graphics:file { getattr open read };
-
-# OTG Tile
-allow system_app sysfs_usb_supply:file { write };
-
-
-# Allow system_app to read fps info node
-allow system_app sysfs_fps:dir search;
-allow system_app sysfs_fps:file r_file_perms;
-
 # Allow system_server for usb and smart charging nodes
 allow system_server sysfs_battery_supply:file { getattr open read write };
+

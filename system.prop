@@ -287,4 +287,10 @@ ro.netflix.bsp_rev=Q670-14477-1
 
 # Media
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
-ro.media.recorder-max-base-layer-fps = 60
+ro.media.recorder-max-base-layer-fps=60
+
+# Charger
+ro.charger.enable_suspend=true
+
+# Zygote
+persist.device_config.runtime_native.usap_pool_enabled=true

@@ -205,6 +205,10 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/off_chg.sh:install/bin/off_chg.sh \
     $(DEVICE_PATH)/rootdir/bin/charger:install/bin/charger
 
+# Charger
+PRODUCT_PACKAGES += \
+    product_charger_res_images
+
 PRODUCT_BOOT_JARS += \
     WfdCommon
 
