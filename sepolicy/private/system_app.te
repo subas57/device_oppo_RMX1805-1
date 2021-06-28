@@ -1,10 +1,9 @@
 type vendor_sysfs_graphics, sysfs_type, fs_type;
 type sysfs_usb_supply, sysfs_type, fs_type;
+
 #allow system_app vibrator_sysfs:file rw_file_perms;
 allow system_app proc_touchpanel:dir { search };
 allow system_app proc_touchpanel:file rw_file_perms;
-allow system_app oppo_debug_prop:file { read open getattr };
-
 r_dir_file(system_app, proc_touchpanel);
 #r_dir_file(system_app, vibrator_sysfs);
 
@@ -17,10 +16,6 @@ allow system_app sysfs:file { getattr open read };
 # OTG Tile
 allow system_app sysfs_usb_supply:file { write };
 
-# Perf profile
-get_prop(system_app, vendor_perf_prop)
-allow system_app vendor_perf_prop:property_service set;
-
 # CABC Mode
 allow system_app default_prop:property_service set;
 
@@ -28,6 +23,4 @@ allow system_app default_prop:property_service set;
 get_prop(system_app, theme_prop)
 set_prop(system_app, theme_prop)
 
-# Allow system_server for usb and smart charging nodes
-allow system_server sysfs_battery_supply:file { getattr open read write };
 

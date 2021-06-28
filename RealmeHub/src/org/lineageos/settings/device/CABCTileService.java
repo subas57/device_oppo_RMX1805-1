@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.device;
+package com.realmeparts;
 
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;

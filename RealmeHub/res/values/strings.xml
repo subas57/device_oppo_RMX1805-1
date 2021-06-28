@@ -31,13 +31,6 @@
     <string name="otg_mode_title">Enable USB-OTG</string>
     <string name="tile_otg_mode">Enable USB-OTG</string>
 
-    <!-- Game Mode -->
-    <string name="game_mode_summary">Boost Touch Sampling Rate and enables performance boosting.\nBattery life will be affected</string>
-    <string name="game_mode_title">Game Mode</string>
-    <string name="tile_game_mode">Game Mode</string>
-    <string name="game_mode_warning">Using game mode will impact battery life significantly</string>
-    <string name="game_mode_notif_content">Game Mode is activated</string>
-
     <!-- DND Switch -->
     <string name="dnd_title">Do Not Disturb</string>
     <string name="dnd_summary">DND will be activated if Game Mode is enabled</string>
@@ -52,15 +45,8 @@
     <string name="reset_stats_title">Reset battery stats</string>
     <string name="reset_stats_summary">Battery stats will get reset when charging limit is reached</string>
 
-    <!-- Gestures: Touchscreen gestures -->
-    <string name="touchscreen_gesture_settings_title">Touchscreen gestures</string>
-    <string name="touchscreen_gesture_settings_summary">Perform various touchscreen gestures for quick actions</string>
-
-   <!-- Log Tile -->
+    <!-- Log Tile -->
     <string name="quick_settings_log_tile_label">LogTile</string>
     <string name="quick_settings_log_tile_dialog_title">Options</string>
     <string name="cannot_get_su">Action failed because of missing superuser access</string>
 </resources>
-
-   
-   

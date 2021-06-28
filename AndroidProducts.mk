@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_RMX1805.mk
+    $(LOCAL_DIR)/havoc_RMX1805.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_RMX1805-user \
-    derp_RMX1805-userdebug \
-    derp_RMX1805-eng
+    havoc_RMX1805-user \
+    havoc_RMX1805-userdebug \
+    havoc_RMX1805-eng

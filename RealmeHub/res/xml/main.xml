@@ -50,30 +50,11 @@
             android:entryValues="@array/cabc_values"
             android:defaultValue="0"
             android:title="@string/cabc_title" />
-  
-        <Preference
-            android:key="touchscreen_gesture_settings"
-            android:icon="@drawable/ic_gestures_icon"
-            android:persistent="false"
-            android:title="@string/touchscreen_gesture_settings_title"
-            android:summary="@string/touchscreen_gesture_settings_summary">
-            <intent
-                    android:action="android.intent.action.MAIN"
-                    android:targetPackage="com.android.touch.gestures"
-                    android:targetClass="com.android.touch.gestures.TouchscreenGestureSettings" />
-        </Preference>
-     </PreferenceCategory>
-
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="graphics"
         android:title="@string/graphics_title">
-
-        <SwitchPreference
-            android:key="game"
-            android:icon="@drawable/ic_game_tile"
-            android:summary="@string/game_mode_summary"
-            android:title="@string/game_mode_title" />
 
         <SwitchPreference
             android:key="dnd"
@@ -99,4 +80,4 @@
             android:summary="@string/otg_mode_summary"
             android:title="@string/otg_mode_title" />
     </PreferenceCategory>
-  </PreferenceScreen>
+</PreferenceScreen>

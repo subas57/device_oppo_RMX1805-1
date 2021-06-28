@@ -1,4 +1,4 @@
- /*
+/*
 * Copyright (C) 2013 The OmniROM Project
 *
 * This program is free software: you can redistribute it and/or modify
@@ -20,9 +20,7 @@ package org.lineageos.settings.device;
 import android.content.res.Resources;
 import android.os.SystemProperties;
 import android.util.Log;
-import android.content.Context;
-import android.content.Intent;
-import android.os.UserHandle;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -200,16 +198,6 @@ public class Utils {
 
     public static void setStringProp(String prop, String value) {
         SystemProperties.set(prop, value);
-    }
-
-    public static void startService(Context context, Class<?> serviceClass ) {
-        context.startServiceAsUser(new Intent(context, serviceClass), UserHandle.CURRENT);
-        Log.d("DeviceSettings", "Starting "+ serviceClass.getCanonicalName());
-    }
-
-    public static void stopService(Context context, Class<?> serviceClass ) {
-        context.stopServiceAsUser(new Intent(context, serviceClass), UserHandle.CURRENT);
-        Log.d("DeviceSettings", "Stopping "+ serviceClass.getCanonicalName());
     }
 
     public static String getStringProp(String prop, String defaultValue) {

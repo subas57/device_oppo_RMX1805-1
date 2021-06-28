@@ -1,3 +1,4 @@
+
 package org.lineageos.settings.device;
 
 import android.annotation.TargetApi;
