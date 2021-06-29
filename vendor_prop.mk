@@ -94,3 +94,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Display
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.sf.lcd_density=398
+
+# WFD
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.wfd.nohdcp=1 \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=0
