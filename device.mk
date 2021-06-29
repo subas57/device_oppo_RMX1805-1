@@ -30,7 +30,7 @@ PRODUCT_COPY_FILES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    GcamGo
 
 # Display
 PRODUCT_PACKAGES += \

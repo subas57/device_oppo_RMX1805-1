@@ -51,6 +51,7 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     ro.vendor.audio.sdk.fluencetype=fluence \
     ro.vendor.audio.sdk.ssr=false \
     ro.vendor.extension_library=libqti-perfd-client.so \
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     sys.vendor.shutdown.waittime=500 \
     vendor.audio.flac.sw.decoder.24bit=true \
     vendor.audio.hw.aac.encoder=true \
@@ -93,10 +94,15 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.lcd_density=399
+    ro.sf.lcd_density=420
 
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.wfd.nohdcp=1 \
     persist.debug.wfd.enable=1 \
     persist.sys.wfd.virtual=0
+
+
+# Media
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.media.recorder-max-base-layer-fps=60
