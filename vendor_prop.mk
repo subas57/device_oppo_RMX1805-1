@@ -90,3 +90,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #Enable Zygote Preforking
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.device_config.runtime_native.usap_pool_enabled=true
+
+# Display
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.sf.lcd_density=398
