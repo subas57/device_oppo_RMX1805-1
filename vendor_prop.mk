@@ -93,7 +93,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.lcd_density=398
+    ro.sf.lcd_density=399
 
 # WFD
 PRODUCT_PROPERTY_OVERRIDES += \
