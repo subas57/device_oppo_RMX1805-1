@@ -9,3 +9,5 @@
 
 # Light
 /system/bin/hw/android\.hardware\.light@2\.0-service\.RMX1805 u:object_r:hal_light_default_exec:s0
+
+/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps    u:object_r:sysfs_fps:s0
