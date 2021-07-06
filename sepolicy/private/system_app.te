@@ -13,6 +13,11 @@ allow system_app vendor_sysfs_graphics:file { getattr open read };
 # FPS Info
 allow system_app sysfs:file { getattr open read };
 
+# FPS info
+allow platform_app sysfs_graphics:file r_file_perms;
+allow platform_app sysfs_fps:file { getattr open read };
+allow platform_app sysfs_graphics:dir search;
+
 # OTG Tile
 allow system_app sysfs_usb_supply:file { write };
 
