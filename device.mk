@@ -110,6 +110,11 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.oppo.rc \
     set_zram.sh \
+    init.msm.usb.configfs.rc \
+    init.qcom.early_boot.sh \
+    init.qcom.post_boot.sh \
+    init.qcom.usb.rc \
+    init.qcom.usb.sh \
     init.realmehub.rc
 
 # Dex
@@ -187,6 +192,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service \
     android.hardware.usb@1.0-service.RMX1805
 
 # Wifi
@@ -210,6 +216,10 @@ PRODUCT_BOOT_JARS += \
 # Touch features
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.oppo_msm8974
+
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
 
 # VNDK
 PRODUCT_PACKAGES += \
