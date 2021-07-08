@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2019 The LineageOS Project
+// Copyright (C) 2020 The Android Open-Source Project
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,23 +12,11 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+//
 
-cc_binary {
-    name: "vendor.lineage.touch@1.0-service.RMX1921",
-    init_rc: ["vendor.lineage.touch@1.0-service.RMX1921.rc"],
-    vintf_fragments: ["vendor.lineage.touch@1.0-service.RMX1921.xml"],
-    defaults: ["hidl_defaults"],
-    proprietary: true,
-    relative_install_path: "hw",
-    srcs: [
-        "TouchscreenGesture.cpp",
-        "service.cpp",
-    ],
-    shared_libs: [
-        "libbase",
-        "libbinder",
-        "libhidlbase",
-        "libutils",
-        "vendor.lineage.touch@1.0",
-    ],
+runtime_resource_overlay {
+    name: "TetheringConfigOverlay",
+    theme: "TetheringConfigOverlay",
+    sdk_version: "current",
+    product_specific: true
 }

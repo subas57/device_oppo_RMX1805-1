@@ -50,6 +50,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RealmeParts \
     RealmeHub
+
+# GApps permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-gapp.xml:system/product/etc/permissions/privapp-permissions-gapp.xml
    
 # Keylayout
 PRODUCT_COPY_FILES += \
@@ -192,8 +196,7 @@ PRODUCT_PACKAGES += \
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service \
-    android.hardware.usb@1.0-service.RMX1805
+    android.hardware.usb@1.0-service 
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -215,11 +218,13 @@ PRODUCT_BOOT_JARS += \
 
 # Touch features
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.oppo_msm8974
+    vendor.lineage.touch@1.0-service.RMX1805
 
 # Trust HAL
 PRODUCT_PACKAGES += \
     vendor.lineage.trust@1.0-service
+
+PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # VNDK
 PRODUCT_PACKAGES += \
@@ -231,3 +236,5 @@ PRODUCT_EXTRA_VNDK_VERSIONS := 28
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/oppo/RMX1805/RMX1805-vendor.mk)
+
+

@@ -1,0 +1,9 @@
+# Wifi
+type vendor_wifi_prop, property_type;
+
+# Oppo props
+type oppo_wlan_prop, property_type;
+
+# Dolby
+type vendor_dolby_loglevel_prop, property_type;
+

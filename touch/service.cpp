@@ -14,39 +14,27 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.touch@1.0-service.oppo_msm8974"
+#define LOG_TAG "vendor.lineage.touch@1.0-service.RMX1921"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
-
-#include "KeyDisabler.h"
 #include "TouchscreenGesture.h"
 
-using android::sp;
-using android::OK;
-
-using ::vendor::lineage::touch::V1_0::IKeyDisabler;
-using ::vendor::lineage::touch::V1_0::implementation::KeyDisabler;
 using ::vendor::lineage::touch::V1_0::ITouchscreenGesture;
 using ::vendor::lineage::touch::V1_0::implementation::TouchscreenGesture;
 
 int main() {
-    sp<IKeyDisabler> keyDisabler = new KeyDisabler();
-    sp<ITouchscreenGesture> touchscreenGesture = new TouchscreenGesture();
+    android::sp<ITouchscreenGesture> gestureService = new TouchscreenGesture();
 
     android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    if (keyDisabler->registerAsService() != OK) {
-        LOG(ERROR) << "Cannot register keydisabler HAL service.";
-        return 1;
-    }
-
-    if (touchscreenGesture->registerAsService() != OK) {
+    if (gestureService->registerAsService() != android::OK) {
         LOG(ERROR) << "Cannot register touchscreen gesture HAL service.";
         return 1;
     }
-    LOG(INFO) << "Touch HAL service is ready.";
+
+    LOG(INFO) << "Touchscreen HAL service ready.";
 
     android::hardware::joinRpcThreadpool();
 
