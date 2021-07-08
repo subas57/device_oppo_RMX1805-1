@@ -26,7 +26,9 @@ PRODUCT_PROPERTY_OVERRIDES +=  \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
-    vendor.audio.dolby.ds2.enabled=false \
+    persist.vendor.audio_fx.current=dolby \
+    ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1 \
+    vendor.audio.dolby.ds2.enabled=true \
     vendor.audio.dolby.ds2.hardbypass=false \
     persist.vendor.audio.hw.binder.size_kbyte=1024 \
     persist.vendor.audio.speaker.prot.enable=false \
@@ -106,3 +108,5 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.media.recorder-max-base-layer-fps=60
+    
+        
