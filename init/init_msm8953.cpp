@@ -1,7 +1,6 @@
 /*
    Copyright (c) 2016, The CyanogenMod Project
    Copyright (c) 2019-2020, The LineageOS Project
-
    Redistribution and use in source and binary forms, with or without
    modification, are permitted provided that the following conditions are
    met:
@@ -14,7 +13,6 @@
     * Neither the name of The Linux Foundation nor the names of its
       contributors may be used to endorse or promote products derived
       from this software without specific prior written permission.
-
    THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
    WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
@@ -113,6 +111,7 @@ void vendor_load_properties()
     property_override("dalvik.vm.heapmaxfree", heapmaxfree);
 
     // fingerprint
-    property_override("ro.build.description", "sunfish-user 11 RQ3A.210605.005 7349499 release-keys");
-    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/sunfish/sunfish:11/RQ3A.210605.005/7349499:user/release-keys");
+    property_override("ro.build.description", "sunfish-user 11 RQ3A.210705.001 7380771 release-keys");
+    property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "google/sunfish/sunfish:11/RQ3A.210705.001/7380771:user/release-keys");
 }
+
