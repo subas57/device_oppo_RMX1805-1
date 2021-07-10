@@ -23,9 +23,6 @@ $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 # Inherit from RMX1805 device
 $(call inherit-product, device/oppo/RMX1805/device.mk)
 
-# Define first api level
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
-
 PRODUCT_BRAND := oppo
 PRODUCT_DEVICE := RMX1805
 PRODUCT_MANUFACTURER := oppo
