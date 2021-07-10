@@ -16,5 +16,3 @@ type sysfs_graphics_ffl, sysfs_type, fs_type;
 # Smart Charging
 type sysfs_scharge, sysfs_type, fs_type;
 
-# FPS Info
-type sysfs_fps, sysfs_type, fs_type;

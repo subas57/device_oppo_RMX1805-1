@@ -1,0 +1,4 @@
+# examine battery state
+r_dir_file(system_server, sysfs_usb_supply);
+
+get_prop(system_server, exported_camera_prop);
