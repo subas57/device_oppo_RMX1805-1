@@ -18,7 +18,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common HavocOS stuff
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
+$(call inherit-product, vendor/dot/config/common_full_phone.mk)
 
 # Inherit from RMX1805 device
 $(call inherit-product, device/oppo/RMX1805/device.mk)
@@ -29,7 +29,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 PRODUCT_BRAND := oppo
 PRODUCT_DEVICE := RMX1805
 PRODUCT_MANUFACTURER := oppo
-PRODUCT_NAME := evolution_RMX1805
+PRODUCT_NAME := dot_RMX1805
 PRODUCT_MODEL := Realme 2/c1
 
 # PRODUCT_GMS_CLIENTID_BASE := android-oppo
