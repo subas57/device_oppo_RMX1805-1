@@ -8,4 +8,3 @@ allow init proc_touchpanel:file { setattr getattr open read write };
 # Otg Switch
 allow init sysfs_usb_supply:file setattr;
 allow init sysfs_usb_supply:file rw_file_perms;
-set_prop(init, oppo_debug_prop)
